@@ -23,7 +23,7 @@ module.exports = function(app) {
     app.use(
         '/api',
         createProxyMiddleware({
-            target: 'http://127.0.0.1:3000',
+            target: 'https://tickets-api-yyd8.onrender.com',
             changeOrigin: true
         })
     );
