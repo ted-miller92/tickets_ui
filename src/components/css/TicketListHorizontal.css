@@ -1,0 +1,6 @@
+.horizontalScrollMenu{
+    display:flex;
+    overflow:auto;
+    white-space: nowrap;
+    background-color:#EEE;
+}

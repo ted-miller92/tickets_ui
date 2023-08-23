@@ -1,0 +1,30 @@
+/*
+below rules give the appearance of a modal, 
+or that the element pops up over the rest of the screen
+*/
+.customModal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    max-width: 100%;
+    height: 60vh;
+    max-height: 100%;
+    padding:10px;
+    z-index: 1010;
+	background-color: white;;
+	border-radius: 15px;
+	border: solid #CCE;
+	box-shadow: 10px 10px 10px #333;
+}
+
+.modalOverlay{
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000099;
+}

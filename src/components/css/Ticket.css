@@ -1,0 +1,8 @@
+.ticket{
+    height: fit-content;
+    min-width: 290px;
+}
+
+.active{
+    background-color:white;
+}

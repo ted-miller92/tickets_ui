@@ -1,0 +1,13 @@
+nav{
+    background-color: rgb(236, 236, 236);
+    margin: auto;
+    display: flex;
+}
+
+.nav-link{
+    color:#0d6efd;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 15px 20px;
+    /* margin: 0px 85px 0px 0px; */
+}
