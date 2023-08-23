@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.82a05bd0.css",
-    "main.js": "/static/js/main.035daa13.js",
-    "static/js/787.54689e7d.chunk.js": "/static/js/787.54689e7d.chunk.js",
-    "index.html": "/index.html",
-    "main.82a05bd0.css.map": "/static/css/main.82a05bd0.css.map",
-    "main.035daa13.js.map": "/static/js/main.035daa13.js.map",
-    "787.54689e7d.chunk.js.map": "/static/js/787.54689e7d.chunk.js.map"
+    "main.css": "/ted-miller92.github.io/tickets_ui/static/css/main.82a05bd0.css",
+    "main.js": "/ted-miller92.github.io/tickets_ui/static/js/main.b744349b.js",
+    "static/js/787.54689e7d.chunk.js": "/ted-miller92.github.io/tickets_ui/static/js/787.54689e7d.chunk.js",
+    "index.html": "/ted-miller92.github.io/tickets_ui/index.html",
+    "main.82a05bd0.css.map": "/ted-miller92.github.io/tickets_ui/static/css/main.82a05bd0.css.map",
+    "main.b744349b.js.map": "/ted-miller92.github.io/tickets_ui/static/js/main.b744349b.js.map",
+    "787.54689e7d.chunk.js.map": "/ted-miller92.github.io/tickets_ui/static/js/787.54689e7d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.82a05bd0.css",
-    "static/js/main.035daa13.js"
+    "static/js/main.b744349b.js"
   ]
 }
