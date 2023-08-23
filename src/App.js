@@ -13,7 +13,7 @@ import Navigation from './components/Navigation';
 function App() {
 	return (
 		<div className="App">
-			<Router>
+			<Router basename="https://ted-miller92.github.io/tickets_ui/">
 			<Navigation />
 			<Routes>
 				<Route path="/" element={<HomePage/>}	/>
