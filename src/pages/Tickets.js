@@ -47,7 +47,14 @@ function Tickets() {
     }
 
     const loadTickets = async () => {
-        const response = await fetch('/api/tickets');
+        const response = await fetch(`/api/tickets`, {
+            mode: "no-cors",
+            method: "GET",
+            headers: {
+                "content-type" :"application/json"
+            }
+        });
+        
         const data = await response.json();
         setTickets(data);
     }
