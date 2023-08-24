@@ -47,7 +47,7 @@ function Tickets() {
     }
 
     const loadTickets = async () => {
-        const response = await fetch(`/api/tickets`, {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}/api/tickets`, {
             mode: "no-cors",
             method: "GET",
             headers: {
