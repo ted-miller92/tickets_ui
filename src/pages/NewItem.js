@@ -7,6 +7,8 @@ import React from "react";
 import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
+const API_ENDPOINT = process.env.REACT_APP_API_URL;
+
 function NewItem(){
     const navigate = useNavigate();
 
@@ -18,7 +20,7 @@ function NewItem(){
         const newItem = {item_name, price, sold_out}
 
         // make a POST req to API
-        const response = await fetch('api/items', {
+        const response = await fetch(`${API_ENDPOINT}/api/items`, {
             method: "POST",
             body : JSON.stringify(newItem),
             headers: {

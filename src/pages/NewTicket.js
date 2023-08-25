@@ -9,6 +9,8 @@ import { useNavigate } from "react-router-dom";
 import AddItemToTicket from "../components/AddItemToTicket";
 import TicketItems from "../components/TicketItems";
 
+const API_ENDPOINT = process.env.REACT_APP_API_URL;
+
 function NewTicket() {
     const navigate = useNavigate();
     
@@ -29,7 +31,7 @@ function NewTicket() {
 
     // load only available items to display when adding item to ticket
     const loadItems = async () => {
-        const response = await fetch('/api/available_items');
+        const response = await fetch(`${API_ENDPOINT}/api/available_items`);
         const data = await response.json();
         setItems(data);
     }
@@ -76,7 +78,7 @@ function NewTicket() {
         setActive(status);
 
         // make a POST request to the API
-        const response = await fetch('/api/tickets', {
+        const response = await fetch(`${API_ENDPOINT}/api/tickets`, {
             method: "POST",
             body: JSON.stringify(newTicket),
             headers: {

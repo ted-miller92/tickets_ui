@@ -8,12 +8,15 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ItemsGridView from '../components/ItemsGridView';
 
+// API endpoit
+const API_ENDPOINT = process.env.REACT_APP_API_URL;
+
 function Items() {
     const [items, setItems] = useState([])
 
     // Function to toggle sold out status of an item
     const onSoldOut = async _id => {
-        const response = await fetch(`/api/items/toggle_sold_out/${_id}`, {method: 'PUT'});
+        const response = await fetch(`${API_ENDPOINT}/api/items/toggle_sold_out/${_id}`, {method: 'PUT'});
 
         if (response.status === 200){
             loadItems();
@@ -29,7 +32,7 @@ function Items() {
         const choice = window.confirm("Are you sure you want to delete this item?");
 
         if (choice){
-            const response = await fetch(`/api/items/${_id}`, {method: 'DELETE'});
+            const response = await fetch(`${API_ENDPOINT}/api/items/${_id}`, {method: 'DELETE'});
             
             if (response.status === 204){
                 const newItems = items.filter(e => e._id !== _id);
@@ -42,7 +45,7 @@ function Items() {
     }
 
     const loadItems = async () => {
-        const response = await fetch('/api/items');
+        const response = await fetch(`${API_ENDPOINT}/api/items`);
         const data = await response.json();
         setItems(data);
     }
