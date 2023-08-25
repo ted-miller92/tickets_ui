@@ -21,7 +21,7 @@ function Tickets() {
         const choice = window.confirm("Are you sure you want to change active status?");
 
         if (choice){
-            const response = await fetch(`/api/tickets/toggle_active/${_id}`, {method: 'PUT'});
+            const response = await fetch(`${API_ENDPOINT}/api/tickets/toggle_active/${_id}`, {method: 'PUT'});
         
             if (response.status === 200) {
                 const newTickets = tickets.filter(e => e._id !== _id);
@@ -38,7 +38,7 @@ function Tickets() {
         const choice = window.confirm("Delete this ticket? There is no recovering the ticket after deletion");
 
         if (choice) {
-            const response = await fetch(`/api/tickets/${_id}`, {method: 'DELETE'});
+            const response = await fetch(`${API_ENDPOINT}/api/tickets/${_id}`, {method: 'DELETE'});
             
             if (response.status === 204){
                 loadTickets();
@@ -50,8 +50,6 @@ function Tickets() {
     }
 
     const loadTickets = async () => {
-        const fetch_address = `${API_ENDPOINT}/api/tickets`;
-        console.log(fetch_address);
         const response = await fetch(`${API_ENDPOINT}/api/tickets`);
         
         const data = await response.json();
