@@ -10,6 +10,9 @@ import TicketListHorizontal from '../components/TicketListHorizontal';
 import TicketListVertical from "../components/TicketListVertical";
 import './css/Tickets.css';
 
+// API endpoit
+const API_ENDPOINT = process.env.REACT_APP_API_URL;
+
 function Tickets() {
     const [tickets, setTickets] = useState([]);
 
@@ -47,13 +50,9 @@ function Tickets() {
     }
 
     const loadTickets = async () => {
-        const response = await fetch(`/api/tickets`, {
-            mode: "no-cors",
-            method: "GET",
-            headers: {
-                "content-type" :"application/json"
-            }
-        });
+        const fetch_address = `${API_ENDPOINT}/api/tickets`;
+        console.log(fetch_address);
+        const response = await fetch(`${API_ENDPOINT}/api/tickets`);
         
         const data = await response.json();
         setTickets(data);
